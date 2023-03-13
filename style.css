@@ -1,0 +1,38 @@
+@font-face {
+    font-family: sourceCodeProBlack;
+    src: url("sauce/Source Code Pro Black.otf");
+}
+
+body{
+    background-color: rgb(27, 27, 27);
+    color: white;
+}
+
+#siteTitle{
+    font-family: sourceCodeProBlack;
+    margin-bottom: 1rem;
+}
+
+#dice{
+    width:15rem;
+    height:17.5rem;
+    margin:1rem;
+    position: relative;
+}
+#diceTitle{
+    display:inline;
+}
+
+/*The number result within the dice box*/
+#result{
+    font-size: 40px;
+}
+
+.diceSpin{
+    animation-name: diceSpin;
+    animation-duration: 1s;
+}
+@keyframes diceSpin {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(720deg);}
+}
