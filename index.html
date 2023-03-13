@@ -20,16 +20,14 @@
             
             <div class="row row-cols-auto justify-content-center" style="margin-bottom: 1rem;">
                 <div class="col">
-                    <button id="btnAddDice" class="btn btn-danger" onClick="addDice()">Roll dice</button>
+                    <button id="btnAddDice" class="btn btn-danger" onClick="printResult()">Roll dice</button>
                 </div>
             </div>
             
             <div id="diceGrid" class="row row-cols-auto g-1 justify-content-center">
                 <div id="dice-0" class="col">
                     <div id="dice" align="center" class="border border-5 rounded-2">
-                        
-                        
-                       
+                                                                     
                         <input id="customSides" onchange="customSidesChanged('dice-0')" type="number" style="width:40%; display: none" value="50"></input>
                         
                         <h5>Result:</h5>
@@ -50,6 +48,6 @@
     </div><!--Main container-->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script src=".\scripts.js"></script>
+    <script src=".\dicelogic.js"></script>
   </body>
 </html>
