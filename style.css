@@ -22,6 +22,10 @@ body{
 #diceTitle{
     display:inline;
 }
+p{
+    border: 10px;
+    color:red
+}
 
 /*The number result within the dice box*/
 #result{
