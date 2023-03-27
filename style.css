@@ -1,7 +1,7 @@
-@font-face {
+/* @font-face {
     font-family: sourceCodeProBlack;
     src: url("sauce/Source Code Pro Black.otf");
-}
+} */
 
 body{
     background-color: rgb(27, 27, 27);
@@ -9,7 +9,7 @@ body{
 }
 
 #siteTitle{
-    font-family: sourceCodeProBlack;
+    font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 1rem;
 }
 
