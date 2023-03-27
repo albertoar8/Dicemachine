@@ -5,51 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DiceMachine</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link href="styles.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
   </head>
   <body>
-    <head>
-        
-    </head>
-    
     <div class="container">
-
         <h1 id="siteTitle" class="text-center display-1">Dice machine</h1>
-
+        <div class="row row-cols-auto justify-content-center" style="margin-bottom: 1rem;">
+          <div class="col">
+              <button id="btnAddDice" class="btn btn-success" onClick="addDice()">Add a dice</button>
+          </div>
+        </div>
+        
         <div id="diceContainer" class="container">
-            
-            <div class="row row-cols-auto justify-content-center" style="margin-bottom: 1rem;">
-                <div class="col">
-                    <button id="btnAddDice" class="btn btn-danger" onClick="addDice()">Roll dice</button>
+          <div id="diceGrid" class="row row-cols-auto g-1 justify-content-center">
+            <div id="dice-0" class="col row-cols-auto g-1 justify-content-center" style="margin-bottom: 1rem; border-color: black; background-color: orange;">
+              <div class="row row-cols-auto g-1 justify-content-center">
+                <h5 id="diceTitle">Dice-0</h5> 
+              </div>
+              <div class="row row-cols-auto g-1 justify-content-center">
+                <label>Choose Dice: </label>
+                <select id="sidesDropdown" onchange="dropDownChanged('dice-0')">
+                  <option>2</option>
+                  <option>4</option>
+                  <option selected>6</option>
+                  <option>8</option>
+                  <option>10</option>
+                  <option>12</option>
+                  <option>20</option>
+                  <option>Custom</option>
+              </select>
+              <input id="customSides" onchange="customSidesChanged('dice-0')" type="number" style="width:40%; display: none" value="50"></input>
+              </div>
+                <div class="row row-cols-auto g-1 justify-content-center">
+                    <input id="customSides" onchange="customSidesChanged('dice-0')" type="number" style="width:40%; display: none" value="50"></input>
+                    <button id="btnRollDice" class="btn btn-danger" onClick="printResult('dice-0')">Roll</button>  
+                </div>       
+                <div class="row row-cols-auto g-1 justify-content-center">
+                  <h5>Result:</h5> 
                 </div>
+                <div class="row row-cols-auto g-1 justify-content-center">
+                  <h5 id="result">0</h5>
+                </div>
+                    
+                    
+                    
             </div>
             
-            <div id="diceGrid" class="row row-cols-auto g-1 justify-content-center">
-                <div id="dice-0" class="col">
-                    <div id="dice" align="center" class="border border-5 rounded-2">
-                        
-                        
-                       
-                        <input id="customSides" onchange="customSidesChanged('dice-0')" type="number" style="width:40%; display: none" value="50"></input>
-                        
-                        <h5>Result:</h5>
-                        <div id="resultBorder"; align="center" class="justif border border-5 rounded-4 d-flex justify-content-center align-items-center" style="width:6.5rem; height:6.5rem;">
-                            <h5 id="result">0</h5>
-                        </div>
-                       
-                    </div><!--Dice div-->
-                </div><!--Dice col-->
-            </div><!--Row-->
-
-           
+          </div>
             
-            
-
         </div><!--Dice container-->
-        
     </div><!--Main container-->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script src=".\scripts.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> -->
+    <script src=".\dicelogic.js"></script>
   </body>
 </html>
